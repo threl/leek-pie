@@ -1,7 +1,7 @@
-import discord
+import os, discord
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(os.environ['COMMAND_PREFIX'])
 
 @bot.event
 async def on_ready():
