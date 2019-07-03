@@ -12,6 +12,7 @@ async def on_ready():
 
 @bot.command()
 async def leek(ctx):
-    await ctx.send("Ada yang mau league, @everyone?")
+    msg = "Ada yang mau league, " + os.environ['ROLE_LEAGUE'] + "?"
+    await ctx.send(msg)
 
 bot.run(os.environ['BOT_TOKEN'])
